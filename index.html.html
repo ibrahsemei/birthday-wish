@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Anita!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(ellipse at center, #ffe0f0, #ffb6c1);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #e91e63;
+      margin-top: 1.5em;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .balloons {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .balloon {
+      width: 40px;
+      height: 60px;
+      border-radius: 50%;
+      position: absolute;
+      animation: float 10s infinite;
+    }
+
+    .balloon::after {
+      content: '';
+      width: 2px;
+      height: 30px;
+      background: #444;
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+
+    .message {
+      max-width: 600px;
+      margin: 3em auto;
+      background: #fff;
+      padding: 2em;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      font-size: 1.2em;
+      line-height: 1.6;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      margin: 2em;
+      font-weight: bold;
+      color: #e91e63;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      .message { padding: 1.5em; font-size: 1em; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="balloons">
+    <div class="balloon" style="left: 10%; background:#ff4081; animation-delay: 0s;"></div>
+    <div class="balloon" style="left: 30%; background:#3f51b5; animation-delay: 1s;"></div>
+    <div class="balloon" style="left: 50%; background:#4caf50; animation-delay: 2s;"></div>
+    <div class="balloon" style="left: 70%; background:#ff9800; animation-delay: 3s;"></div>
+    <div class="balloon" style="left: 90%; background:#9c27b0; animation-delay: 4s;"></div>
+  </div>
+
+  <h1>Happy Birthday Anita!</h1>
+
+  <div class="message">
+    Life with you is a nonstop mix of laughter, love, and maybe a little too much snack sharing.  
+    <br /><br />
+    You understand me better than anyone. Thank you for being my partner in crime, my shoulder to lean on, and the one who makes every day brighter.  
+    <br /><br />
+    Wishing you a new age filled with joy, adventure, and all the happiness you bring to others.  
+    <br /><br />
+    You deserve the world—and at least the last slice of pizza.
+  </div>
+
+  <footer>
+    By your loving sister, Mwigi 💖
+  </footer>
+
+</body>
+</html>
